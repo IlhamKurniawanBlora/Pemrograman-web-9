@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD Mahasiswa</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>CRUD Data Mahasiswa</h1>
+
+    <!-- Tombol Create Data -->
+    <button id="createDataButton" class="btn btn-create">Create Data</button>
+
+    <!-- Kolom Pencarian Data Berdasarkan NIM -->
+    <div id="searchContainer">
+      <input type="text" id="searchNim" placeholder="Cari berdasarkan NIM" />
+      <button id="searchButton" >Cari</button>
+    </div>
+
+    <!-- Tabel Data Mahasiswa -->
+    <h2>Data Mahasiswa</h2>
+    <table id="tabelMahasiswa">
+      <thead>
+        <tr>
+          <th>NIM</th>
+          <th>Nama Mahasiswa</th>
+          <th>Prodi</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data akan dimuat secara dinamis melalui JavaScript -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Modal Form Mahasiswa -->
+  <div id="modalForm" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Form Mahasiswa</h2>
+      <form id="formMahasiswa">
+        <label for="nim">NIM:</label>
+        <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required />
+        <label for="namaMahasiswa">Nama Mahasiswa</label>
+        <input type="text" id="namaMahasiswa" name="namaMahasiswa" placeholder="Masukkan Nama Mahasiswa" required />
+        <label for="namaProdi">Prodi:</label>
+        <input type="text" id="namaProdi" name="namaProdi" placeholder="Masukkan Nama Prodi" required />
+        <button type="submit" id="submitButton">Tambah</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal View Data Mahasiswa -->
+  <div id="modalView" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Data Mahasiswa</h2>
+      <p><strong>NIM:</strong> <span id="viewNim"></span></p>
+      <p><strong>Nama:</strong> <span id="viewNamaMahasiswa"></span></p>
+      <p><strong>Prodi:</strong> <span id="viewNamaProdi"></span></p>
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>

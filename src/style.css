@@ -1,0 +1,304 @@
+/* Dark Orange Glassmorphism Theme */
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #f0f0f0;
+    --text-secondary: #ff7f50;
+    --accent-color: #ff4500;
+    --glass-bg: rgba(255, 127, 80, 0.1);
+    --glass-border: rgba(255, 127, 80, 0.2);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 
+        0 8px 32px 0 rgba(255, 127, 80, 0.1),
+        0 4px 16px 0 rgba(255, 127, 80, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-secondary);
+    text-shadow: 0 0 10px rgba(255, 127, 80, 0.5);
+}
+
+form {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.3);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--text-secondary);
+}
+
+form input {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 10px;
+    background-color: rgba(30, 30, 30, 0.7);
+    border: 1px solid var(--glass-border);
+    border-radius: 4px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+}
+
+form button {
+    padding: 10px 15px;
+    background: var(--accent-color);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: var(--text-secondary);
+    box-shadow: 0 0 15px rgba(255, 127, 80, 0.5);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(5px);
+}
+
+table th, table td {
+    border: 1px solid var(--glass-border);
+    padding: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+table th {
+    background: rgba(255, 69, 0, 0.3);
+    color: var(--text-primary);
+}
+
+table tr:nth-child(even) {
+    background: rgba(30, 30, 30, 0.5);
+}
+
+table tr:hover {
+    background: rgba(255, 127, 80, 0.1);
+    box-shadow: 0 0 10px rgba(255, 127, 80, 0.2);
+}
+
+button.action {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.edit {
+    background: #ffc107;
+    color: var(--bg-primary);
+}
+
+button.edit:hover {
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+}
+
+button.delete {
+    background: #dc3545;
+    color: var(--text-primary);
+}
+
+button.delete:hover {
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.5);
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--bg-secondary);
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 50%;
+    box-shadow: 
+        0 8px 32px 0 rgba(255, 127, 80, 0.2),
+        0 4px 16px 0 rgba(255, 127, 80, 0.1);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+}
+
+.close {
+    color: var(--text-secondary);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--accent-color);
+    text-decoration: none;
+    cursor: pointer;
+    text-shadow: 0 0 10px rgba(255, 69, 0, 0.5);
+}
+/* Import Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* Shared button styles */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    gap: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Create Button */
+.btn-create {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-create:hover {
+    background-color: #218838;
+}
+
+.btn-create i {
+    margin-right: 8px;
+    color: #fff;
+}
+
+/* Edit Button */
+.btn-edit {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.btn-edit:hover {
+    background-color: #e0a800;
+}
+
+.btn-edit i {
+    margin-right: 8px;
+    color: #212529;
+}
+
+/* Delete Button */
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-delete:hover {
+    background-color: #bd2130;
+}
+
+.btn-delete i {
+    margin-right: 8px;
+    color: #fff;
+}
+
+/* Disabled State */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+/* Styling untuk tombol pencarian */
+#searchButton {
+    background-color: #4CAF50; /* Warna hijau */
+    color: white; /* Warna teks */
+    border: none; /* Menghapus border */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    font-size: 16px; /* Ukuran font */
+    cursor: pointer; /* Menampilkan pointer saat hover */
+    border-radius: 5px; /* Membuat sudut tombol melengkung */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna */
+  }
+  
+  #searchButton:hover {
+    background-color: #45a049; /* Warna saat hover */
+  }
+  
+  /* Styling untuk input pencarian */
+  #searchNim {
+    padding: 10px; /* Padding di dalam input */
+    font-size: 16px; /* Ukuran font */
+    border: 1px solid #ccc; /* Border abu-abu */
+    border-radius: 5px; /* Membuat sudut input melengkung */
+    margin-right: 10px; /* Jarak antara input dan tombol */
+    width: 200px; /* Lebar input */
+  }
+  
+  #searchContainer {
+    margin: 20px 0; /* Margin di sekitar kotak pencarian */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: start; /* Posisi kiri */
+    align-items: center; /* Align vertikal */
+  }
+  
